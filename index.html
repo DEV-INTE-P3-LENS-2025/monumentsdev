@@ -4,19 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les monuments</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Les Monuments</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header>
-        <h1>Les monuments</h1>
+        <h1>Les Monuments de France</h1>
+        <p>Cliquez sur un monument ou son bouton pour obtenir une description et voir sa localisation sur la carte.</p>
     </header>
-    <script type="text/javascript" src="script.js"></script>
+
+    <main>
+      
+        <section class="monuments-gallery">
+            <div class="monument" data-id="tour-eiffel">
+                <button class="info-btn">Tour Eiffel</button>
+                <img src="./images/tour eiffel.jpg" alt="Tour Eiffel" />
+            </div>
+            <div class="monument" data-id="arc-de-triomphe">
+                <button class="info-btn">Arc de Triomphe</button>
+                <img src="./images/arc.jpg" alt="Arc de Triomphe" />
+            </div>
+            <div class="monument" data-id="mont-saint-michel">
+                <button class="info-btn">Mont-Saint-Michel</button>
+                <img src="./images/mont-Saint michel.jpg" alt="Mont-Saint-Michel" />
+            </div>
+            <div class="monument" data-id="notre-dame">
+                <button class="info-btn">Notre-Dame</button>
+                <img src="./images/notre dame.jpg" alt="Notre-Dame" />
+            </div>
+            <div class="monument" data-id="versailles">
+                <button class="info-btn">Versailles</button>
+                <img src="./images/versailles.jpg" alt="Château de Versailles" />
+            </div>
+        </section>
+
+        
+        <section id="monument-info" class="info-section">
+            <div id="monument-description"></div>
+            <div id="map-container"></div> 
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
