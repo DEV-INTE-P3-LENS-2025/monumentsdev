@@ -50,15 +50,17 @@ function showMonumentInfo(id) {
 function updateImageSelection(selectedId) {
     document.querySelectorAll('.monument').forEach(element => {
         const img = element.querySelector('img');
-        if (element.getAttribute('data-id') === selectedId) {
-            img.classList.add('selected');
-            const id = element.getAttribute('data-id');
+        const id = element.getAttribute('data-id');
+
+        if (id === selectedId) {
+            img.classList.remove('grayscale');
             showMonumentInfo(id);
         } else {
-            img.classList.remove('selected');
+            img.classList.add('grayscale');
         }
     });
 }
+
 
 // Ajouter des événements pour afficher les informations et la carte
 document.querySelectorAll('.monument').forEach(element => {

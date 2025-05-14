@@ -74,7 +74,7 @@ header p {
 }
 
 
-.info-btn:hover {
+.info-btn {
   background-color: #333;
 }
 
@@ -151,10 +151,11 @@ header p {
     transition: filter 0.3s, border 0.3s;
 }
 
-.monument.selected img {
-  filter: none; 
+.monument img {
+  filter: none;
+  transition: filter 0.3s;
 }
 
-.monument img:not(.selected) {
-  filter: grayscale(100%); 
+.monument img.grayscale {
+  filter: grayscale(100%);
 }
